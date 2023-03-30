@@ -22,6 +22,7 @@ local utility = win:Tab("Utility")
 local boss = teleport:Section("Bosses")
 local city = teleport:Section("Cities")
 local utilities = utility:Section("Utilities")
+local enables = utility:Section("Enables")
 
 local user = game:GetService("Players").LocalPlayer.Name
 local player = game:GetService("Players").LocalPlayer
@@ -75,11 +76,6 @@ city:Button("Rainbow Village", function()
     tp(locVillage)
 end)
 
-utilities:Button("Attack Speed + Range", function()
-    player.AttackSpeed.Value = 1000
-    player.AttackType.Value = "Ranged"
-end)
-
 utilities:Button("Sell Items", function()
     for x=4, 72, 1 do
         local args = {
@@ -90,6 +86,11 @@ utilities:Button("Sell Items", function()
     end
 end)
 
-utilities:Button("Auto Pickup Items", function()
+enables:Button("Attack Speed + Range", function()
+    player.AttackSpeed.Value = 1000
+    player.AttackType.Value = "Ranged"
+end)
+
+enables:Button("Auto Pickup Items", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/InForsaken/TML/main/Auto%20Pickup.lua"))()
 end)
