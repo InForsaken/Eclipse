@@ -49,11 +49,12 @@ function buff()
             [1] = game:GetService("Players"):WaitForChild("SkyDragonLord"):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("Shortcut"):WaitForChild("Line2"):WaitForChild("Line"):WaitForChild("x")
         }
         game:GetService("Players"):WaitForChild("SkyDragonLord"):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("EventHandler"):WaitForChild("ShortcutButtonActivate"):FireServer(unpack(buffs))
+        Wait(4.1)
     end
     
     for x=15, 14, -1 do
         local buffs = {
-            [1] = game:GetService("Players"):WaitForChild(player.Name):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("Shortcut"):WaitForChild("Line2"):WaitForChild("Line"):WaitForChild("x")
+            [1] = game:GetService("Players"):WaitForChild(player.Name):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("Shortcut"):WaitForChild("Line2"):WaitForChild("Line"):WaitForChild(x)
         }
         game:GetService("Players"):WaitForChild(player.Name):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("EventHandler"):WaitForChild("ShortcutButtonActivate"):FireServer(unpack(buffs))
     end
