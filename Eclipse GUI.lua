@@ -43,6 +43,22 @@ function tp(loc)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = location
 end
 
+function buff()
+    for x=15, 8, -1 do
+        local buffs = {
+            [1] = game:GetService("Players"):WaitForChild("SkyDragonLord"):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("Shortcut"):WaitForChild("Line2"):WaitForChild("Line"):WaitForChild("x")
+        }
+        game:GetService("Players"):WaitForChild("SkyDragonLord"):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("EventHandler"):WaitForChild("ShortcutButtonActivate"):FireServer(unpack(buffs))
+    end
+    
+    for x=15, 14, -1 do
+        local buffs = {
+            [1] = game:GetService("Players"):WaitForChild(player.Name):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("Shortcut"):WaitForChild("Line2"):WaitForChild("Line"):WaitForChild("x")
+        }
+        game:GetService("Players"):WaitForChild(player.Name):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("EventHandler"):WaitForChild("ShortcutButtonActivate"):FireServer(unpack(buffs))
+    end
+end
+
 -- Buttons
 boss:Button("The Burning One", function()
     tp(locTBO)
@@ -84,6 +100,10 @@ utilities:Button("Sell Items", function()
     
         game:GetService("Players"):WaitForChild(user):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("EventHandler"):WaitForChild("onDragToSell"):FireServer(unpack(args))
     end
+end)
+
+utilities:Button("Buff Up", function()
+    buff()
 end)
 
 enables:Button("Attack Speed + Range", function()
