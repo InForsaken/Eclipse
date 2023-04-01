@@ -1,7 +1,5 @@
 repeat task.wait() until game:IsLoaded()
-if game.PlaceId == 131398325 then
-    wait(1)
-else
+if game.PlaceId ~= 131398325 then
     while true do
         task.wait()
     end
