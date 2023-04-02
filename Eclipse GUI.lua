@@ -102,7 +102,7 @@ utilities:Button("Open Shop", function()
         [1] = game:GetService("ReplicatedStorage"):WaitForChild("NPCService"):WaitForChild("Andrew, The Pharmacist")
     }
     game:GetService("ReplicatedStorage"):WaitForChild("RemoteObject"):WaitForChild("SetNPCChatting"):FireServer(unpack(shop))
-    Wait(0.1)
+    Wait(0.5)
     tp(current)
 end)
 
