@@ -33,6 +33,7 @@ local locKnight = "-101.512383, 85.4999924, 508.514832, 0.356125474, -1.11925749
 local locCity = "494.000122, 87.7298279, 502.999939, -0.0175019484, 1.05737641e-07, 0.999846816, 7.18695281e-09, 1, -1.05628033e-07, -0.999846816, 5.33715561e-09, -0.0175019484"
 local locDesert = "535.96936, 87.4999771, 2229.42163, -0.00187812373, 1.91051464e-09, -0.999998212, -3.22411486e-10, 1, 1.9111237e-09, 0.999998212, 3.26000255e-10, -0.00187812373"
 local locVillage = "-416.356812, 86.4999847, -711.766968, -0.999965429, 6.27715491e-10, -0.00831575599, 5.76243664e-10, 1, 6.19206997e-09, 0.00831575599, 6.18706419e-09, -0.999965429"
+local locShop = "426.000641, 86.7298203, 547.499207, 0.99999994, 1.50345212e-08, 0.00025941772, -1.4998319e-08, 1, -1.39557486e-07, -0.00025941772, 1.39553592e-07, 0.99999994"
 local location
 
 -- Functions
@@ -93,10 +94,15 @@ city:Button("Rainbow Village", function()
 end)
 
 utilities:Button("Open Shop", function()
+    local current = tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+    Wait(0.1)
+    tp(locShop)
+    Wait(0.1)
     local shop = {
         [1] = game:GetService("ReplicatedStorage"):WaitForChild("NPCService"):WaitForChild("Andrew, The Pharmacist")
     }
     game:GetService("ReplicatedStorage"):WaitForChild("RemoteObject"):WaitForChild("SetNPCChatting"):FireServer(unpack(shop))
+    tp(current)
 end)
 
 utilities:Button("Sell Items", function()
