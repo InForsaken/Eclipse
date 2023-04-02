@@ -97,7 +97,7 @@ utilities:Button("Open Shop", function()
         [1] = game:GetService("ReplicatedStorage"):WaitForChild("NPCService"):WaitForChild("Andrew, The Pharmacist")
     }
     game:GetService("ReplicatedStorage"):WaitForChild("RemoteObject"):WaitForChild("SetNPCChatting"):FireServer(unpack(shop))
-end
+end)
 
 utilities:Button("Sell Items", function()
     for x=4, 72, 1 do
