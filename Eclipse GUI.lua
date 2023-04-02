@@ -95,14 +95,14 @@ end)
 
 utilities:Button("Open Shop", function()
     local current = tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
-    Wait(0.1)
-    tp(locShop)
     Wait(0.5)
+    tp(locShop)
+    Wait(1)
     local shop = {
         [1] = game:GetService("ReplicatedStorage"):WaitForChild("NPCService"):WaitForChild("Andrew, The Pharmacist")
     }
     game:GetService("ReplicatedStorage"):WaitForChild("RemoteObject"):WaitForChild("SetNPCChatting"):FireServer(unpack(shop))
-    Wait(0.5)
+    Wait(1)
     tp(current)
 end)
 
