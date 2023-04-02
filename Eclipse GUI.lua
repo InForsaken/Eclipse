@@ -92,6 +92,13 @@ city:Button("Rainbow Village", function()
     tp(locVillage)
 end)
 
+utilities:Button("Open Shop", function()
+    local shop = {
+        [1] = game:GetService("ReplicatedStorage"):WaitForChild("NPCService"):WaitForChild("Andrew, The Pharmacist")
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("RemoteObject"):WaitForChild("SetNPCChatting"):FireServer(unpack(shop))
+end
+
 utilities:Button("Sell Items", function()
     for x=4, 72, 1 do
         local args = {
