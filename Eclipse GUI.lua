@@ -43,20 +43,20 @@ function tp(loc)
 end
 
 function buff()
-    for x=15, 8, -1 do
+    for x=15, 10, -1 do
         local buffs = {
-            [1] = game:GetService("Players"):WaitForChild("SkyDragonLord"):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("Shortcut"):WaitForChild("Line2"):WaitForChild("Line"):WaitForChild(x)
+            [1] = game:GetService("Players"):WaitForChild(user):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("Shortcut"):WaitForChild("Line2"):WaitForChild("Line"):WaitForChild(x)
         }
-        game:GetService("Players"):WaitForChild("SkyDragonLord"):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("EventHandler"):WaitForChild("ShortcutButtonActivate"):FireServer(unpack(buffs))
+        game:GetService("Players"):WaitForChild(user):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("EventHandler"):WaitForChild("ShortcutButtonActivate"):FireServer(unpack(buffs))
         Wait(4.1)
     end
     
-    for x=15, 14, -1 do
+    for x=15, 10, -1 do
         local buffs = {
-            [1] = game:GetService("Players"):WaitForChild(player.Name):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("Shortcut"):WaitForChild("Line3"):WaitForChild("Line"):WaitForChild(x)
+            [1] = game:GetService("Players"):WaitForChild(user):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("Shortcut"):WaitForChild("Line3"):WaitForChild("Line"):WaitForChild(x)
         }
-        game:GetService("Players"):WaitForChild(player.Name):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("EventHandler"):WaitForChild("ShortcutButtonActivate"):FireServer(unpack(buffs))
-        Wait(0.1)
+        game:GetService("Players"):WaitForChild(user):WaitForChild("PlayerGui"):WaitForChild("SystemGUI"):WaitForChild("EventHandler"):WaitForChild("ShortcutButtonActivate"):FireServer(unpack(buffs))
+        Wait(4.1)
     end
 end
 
